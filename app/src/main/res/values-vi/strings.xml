@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarForRent</string>
+    <string name="close">Đóng</string>
+    <string name="notification_channel_general_name">Chung</string>
+    <string name="notification_channel_general_desc">Thông báo đặt xe, chat và tài khoản</string>
+    <string name="generic_user">Người dùng</string>
+    <string name="generic_error">Có lỗi xảy ra</string>
+    <string name="unread_count_overflow">99+</string>
+
+    <string name="seed_dialog_title">Tạo dữ liệu thử</string>
+    <string name="seed_dialog_message">Tạo 20 user test có tín dụng?\n\nBạn sẽ bị đăng xuất sau khi seed và cần đăng nhập lại.</string>
+    <string name="seed_action">Seed</string>
+    <string name="seed_cancel">Hủy</string>
+    <string name="seed_in_progress">Đang seed dữ liệu…</string>
+    <string name="seed_success">Đã seed %1$d user. Vui lòng đăng nhập lại.</string>
+    <string name="seed_failed">Seed thất bại: %1$s</string>
+
+    <string name="error_bids_cancel_by_listing_only">Chỉ có thể hủy bid bằng cách hủy listing</string>
+    <string name="route_unavailable">Không lấy được đường đi</string>
+
+    <!-- Toolbar -->
+    <string name="dark_mode">Chế Độ Tối</string>
+    <string name="language_switch_label">English</string>
+
+    <!-- Home Screen -->
+    <string name="search_hint">Tìm theo tên hoặc loại…</string>
+    <string name="available_cars">Xe Có Sẵn</string>
+    <string name="credits_format">%d Tín Dụng</string>
+    <string name="credits_per_day_format">%d TD/ngày</string>
+    <string name="credits_suffix">Tín dụng</string>
+    <string name="km_format">%,d km</string>
+    <string name="favourites_title">Yêu Thích</string>
+    <string name="no_favourites">Chưa có xe yêu thích. Nhấn giữ để thêm.</string>
+    <string name="no_cars">Không có xe nào</string>
+    <string name="rented_badge">Đã cho thuê</string>
+    <string name="filter_title">Lọc Xe</string>
+    <string name="filter_all">Tất cả xe</string>
+    <string name="filter_available">Chỉ xe có sẵn</string>
+    <string name="filter_rented">Chỉ xe đã thuê</string>
+    <string name="location_lat_lng_format">Vĩ độ: %1$.4f, Kinh độ: %2$.4f</string>
+
+    <!-- Detail Screen -->
+    <string name="car_details">Chi Tiết Xe</string>
+    <string name="model_year_format">%1$s • %2$d</string>
+    <string name="spec_km">Loại Xe</string>
+    <string name="spec_cost">Giá/Ngày</string>
+    <string name="spec_year">Năm SX</string>
+    <string name="your_balance">Số Dư</string>
+    <string name="rent_this_car">Thuê Xe Này</string>
+
+    <!-- Rent Screen -->
+    <string name="booking">Đặt Xe</string>
+    <string name="rental_duration">Thời Gian Thuê</string>
+    <string name="days_format">%d ngày</string>
+    <string name="day_format">%d ngày</string>
+    <!-- Rental Form -->
+    <string name="your_details">Thông Tin Của Bạn</string>
+    <string name="name_hint">Họ và Tên</string>
+    <string name="phone_hint">Số Điện Thoại</string>
+    <string name="license_hint">Số Bằng Lái Xe</string>
+    <string name="email_hint">Địa chỉ Email</string>
+    <string name="cost_summary">Tóm Tắt Chi Phí</string>
+    <string name="daily_cost">Giá/Ngày</string>
+    <string name="duration">Thời Gian</string>
+    <string name="total_cost">Tổng Chi Phí</string>
+    <string name="after_booking">Sau Khi Đặt</string>
+    <string name="confirm_booking">Xác Nhận Đặt Xe</string>
+    <string name="cancel">Hủy</string>
+
+    <!-- Messages -->
+    <string name="booking_confirmed">Đặt xe thành công!</string>
+    <string name="booking_cancelled">Đã hủy đặt xe</string>
+    <string name="booking_cancelled_refund">Đã hủy đặt xe — Hoàn lại %d Tín dụng</string>
+    <string name="cancel_booking">Hủy Đặt Xe</string>
+    <string name="booking_info">Thông tin thuê xe</string>
+    <string name="booking_days_format">%1$d ngày • %2$d Tín dụng</string>
+    <string name="added_to_favourites">Đã thêm %s vào yêu thích</string>
+    <string name="removed_from_favourites">Đã xóa %s khỏi yêu thích</string>
+    <string name="error_field_required">Vui lòng điền đầy đủ các thông tin bắt buộc</string>
+    <string name="error_invalid_name">Tên không được chứa số hoặc kí tự đặc biệt</string>
+    <string name="error_invalid_phone">Số điện thoại phải có 10 chữ số và bắt đầu bằng 0</string>
+    <string name="invalid_email">Vui lòng nhập email hợp lệ</string>
+    <string name="error_max_limit_exceeded">Chi phí thuê (%1$d) vượt quá giới hạn tối đa %2$d Tín dụng</string>
+    <string name="error_insufficient_credit">Tín dụng không đủ. Số dư của bạn là %1$d Tín dụng</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="language_english">English</string>
+    <string name="language_vietnamese">Tiếng Việt</string>
+
+    <!-- Sort Menu -->
+    <string name="sort_by">Sắp xếp theo</string>
+    <string name="sort_by_year">Năm (Mới → Cũ)</string>
+    <string name="sort_by_cost">Giá thuê (Thấp → Cao)</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_car_image">Hình ảnh xe</string>
+    <string name="cd_toggle_favourite">Yêu thích</string>
+    <string name="cd_back">Quay lại</string>
+    <string name="cd_sort">Sắp xếp</string>
+    <string name="cd_share">Chia sẻ xe</string>
+    <string name="cd_close">Đóng</string>
+    <string name="cd_chat_image_fullscreen">Ảnh trong chat</string>
+    <string name="share_car_text">Dưới đây là thông tin chi tiết về xe cho thuê từ hệ thống CarForRent:\n\n• Dòng xe: %1$s (%2$d)\n• Đánh giá: %3$.1f/5\n• Giá thuê: %4$d Tín dụng/ngày\n\nVui lòng phản hồi nếu bạn quan tâm đến lựa chọn này.</string>
+    <string name="share_copied">Đã lưu nội dung để bạn tự Dán vào Messenger</string>
+
+    <!-- Wallet -->
+    <string name="wallet_title">Ví Tiền</string>
+    <string name="current_balance">Số Dư Hiện Tại</string>
+    <string name="top_up">Nạp Tiền</string>
+    <string name="tab_overview">Tổng Quan</string>
+    <string name="tab_history">Lịch Sử</string>
+    <string name="spending_summary">Tổng Kết Chi Tiêu</string>
+    <string name="total_spent">Tổng Đã Chi</string>
+    <string name="total_spent_rental">Đã chi (thuê)</string>
+    <string name="total_held_bids">Đang giữ (bid)</string>
+    <string name="total_topped_up">Tổng Đã Nạp</string>
+    <string name="total_income">Tổng Nhận Được</string>
+    <string name="no_transactions">Chưa có giao dịch nào</string>
+    <string name="top_up_success">Nạp thành công %d Tín dụng!</string>
+
+    <string name="credits_amount_format">%1$s TD</string>
+    <string name="cd_transaction_type">Loại giao dịch</string>
+    <string name="transaction_details">Chi tiết giao dịch</string>
+    <string name="transaction_type_format">Loại: %s</string>
+    <string name="transaction_reference_format">Mã tham chiếu: %s</string>
+    <string name="transaction_balance_after_format">Số dư sau: %d TD</string>
+
+    <string name="txn_search_hint">Tìm giao dịch…</string>
+
+    <!-- SePay / QR -->
+    <string name="select_amount">Chọn mức nạp</string>
+    <string name="generate_qr">Tạo Mã QR</string>
+    <string name="pay_now">Thanh Toán (Mở App Ngân Hàng)</string>
+    <string name="simulate_payment">Giả Lập Thanh Toán (Demo)</string>
+    <string name="qr_code">Mã QR</string>
+    <string name="scan_qr_instruction">Quét mã QR này bằng ứng dụng ngân hàng để hoàn tất thanh toán</string>
+    <string name="waiting_payment">Đang chờ xác nhận thanh toán…</string>
+    <string name="waiting_payment_with_timer">Đang chờ thanh toán… (%ds)</string>
+    <string name="payment_confirmed">Thanh toán đã xác nhận!</string>
+    <string name="payment_timeout">Không phát hiện thanh toán. Vui lòng thử lại hoặc kiểm tra ứng dụng ngân hàng.</string>
+    <string name="payment_error">Đã xảy ra lỗi khi xác minh thanh toán.</string>
+    <string name="or_scan_qr">Hoặc quét mã QR bên dưới</string>
+    <string name="custom_amount_hint">Hoặc nhập số tùy chọn</string>
+    <string name="enter_amount_hint">Nhập số lượng</string>
+    <string name="vnd_equivalent_format">= %,d VND</string>
+    <string name="sepay_transfer_account_format">%1$s • %2$s • %3$s</string>
+    <string name="credit_to_vnd_format">%1$d %2$s = %3$,3d VND</string>
+    <string name="view_qr_fullscreen">Xem QR Toàn Màn Hình</string>
+    <string name="no_banking_app">Không tìm thấy app ngân hàng. Dùng QR để quét.</string>
+    <string name="invalid_amount">Vui lòng nhập số hợp lệ (1–99999)</string>
+    <string name="confirm_top_up">Xác Nhận Nạp Tiền</string>
+    <string name="open_banking_app">Mở Ứng Dụng Ngân Hàng</string>
+    <string name="transfer_info">Thông tin chuyển khoản</string>
+    <string name="copy_memo">Copy nội dung</string>
+    <string name="copy_all">Copy tất cả</string>
+    <string name="copy_amount">Copy số tiền</string>
+    <string name="copy_account">Copy STK</string>
+    <string name="copy_reference">Copy mã tham chiếu</string>
+    <string name="copied">Đã copy</string>
+    <string name="retry_check_payment">Kiểm tra lại thanh toán</string>
+
+    <!-- Map -->
+    <string name="map_title">Vị Trí Xe</string>
+    <string name="view_details">Xem Chi Tiết</string>
+
+    <!-- Recommendations -->
+    <string name="recommended_for_you">Gợi Ý Cho Bạn</string>
+    <string name="popular_cars">Xe Phổ Biến</string>
+
+    <!-- Auth -->
+    <string name="login">Đăng Nhập</string>
+    <string name="register">Đăng Ký</string>
+    <string name="login_subtitle">Đăng nhập để thuê hoặc cho thuê xe</string>
+    <string name="login_google">Tiếp tục với Google</string>
+    <string name="or_divider">— hoặc —</string>
+    <string name="no_account">Chưa có tài khoản?</string>
+    <string name="has_account">Đã có tài khoản?</string>
+    <string name="create_account">Tạo Tài Khoản</string>
+    <string name="password_hint">Mật khẩu</string>
+    <string name="confirm_password_hint">Xác nhận mật khẩu</string>
+    <string name="error_password_short">Mật khẩu phải có ít nhất 8 ký tự</string>
+    <string name="error_password_no_digit">Mật khẩu phải chứa ít nhất một chữ số</string>
+    <string name="error_password_mismatch">Mật khẩu không khớp</string>
+    <string name="error_name_letters_only">Họ tên chỉ được chứa chữ cái và dấu cách</string>
+    <string name="error_login">Đăng nhập thất bại. Vui lòng thử lại.</string>
+    <string name="error_login_user_not_found">Không tìm thấy tài khoản với email này</string>
+    <string name="error_login_wrong_password">Mật khẩu không đúng</string>
+    <string name="error_login_invalid_credential">Email hoặc mật khẩu không hợp lệ</string>
+    <string name="error_login_too_many_requests">Quá nhiều lần thử. Vui lòng thử lại sau</string>
+    <string name="error_login_network">Lỗi mạng. Vui lòng kiểm tra kết nối</string>
+    <string name="error_login_user_disabled">Tài khoản này đã bị vô hiệu hóa</string>
+    <string name="error_register">Đăng ký thất bại. Vui lòng thử lại.</string>
+    <string name="error_register_email_exists">Đã có tài khoản với email này</string>
+    <string name="error_google_sign_in">Đăng nhập Google thất bại</string>
+    <string name="logout">Đăng Xuất</string>
+
+    <!-- Add Car -->
+    <string name="add_car_title">Thêm Xe</string>
+    <string name="car_photos">Hình Ảnh</string>
+    <string name="add_photo">Thêm Ảnh</string>
+    <string name="photos_count">Đã chọn %d ảnh</string>
+    <string name="spec_year_hint">* Năm SX</string>
+    <string name="car_title_hint">* Tên Xe (vd: McLaren 600LT)</string>
+    <string name="car_model_hint">* Loại Xe</string>
+    <string name="daily_cost_hint">* Giá Thuê/Ngày (Tín dụng)</string>
+    <string name="max_days_hint">* Số Ngày Tối Đa</string>
+    <string name="notes_hint">Ghi Chú Thêm</string>
+    <string name="pickup_location">Vị Trí Nhận Xe</string>
+    <string name="tap_map_to_select">Chạm vào bản đồ để chọn vị trí nhận xe</string>
+    <string name="list_car">Đăng Xe</string>
+    <string name="car_listed_success">Đăng xe thành công!</string>
+    <string name="error_select_location">Vui lòng chọn vị trí nhận xe trên bản đồ</string>
+    <string name="error_daily_cost_zero">Giá thuê phải lớn hơn 0</string>
+    <string name="error_max_days_zero">Số ngày tối đa phải ít nhất là 1</string>
+    <string name="error_invalid_year">Nhập năm hợp lệ (1990–%d)</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Hồ Sơ</string>
+    <string name="my_listings">Xe Đã Đăng</string>
+    <string name="my_rentals">Xe Đã Thuê</string>
+    <string name="no_listings">Bạn chưa đăng xe nào</string>
+    <string name="no_rentals">Bạn chưa thuê xe nào</string>
+    <string name="top_up_credits">Nạp Tín Dụng</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_cars">Xe</string>
+    <string name="nav_notifications">Thông báo</string>
+    <string name="nav_me">Hồ sơ</string>
+    <string name="credits_balance_label">Số dư tín dụng</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="chevron_right" translatable="false">›</string>
+    <string name="tab_my_cars">Xe Của Tôi</string>
+    <string name="tab_my_listings">Đang Đăng</string>
+    <string name="tab_my_rentals">Xe Đang Thuê</string>
+
+    <!-- Navigation menu -->
+    <string name="action_my_listings">Xe Của Tôi</string>
+    <string name="action_my_rentals">Xe Đã Thuê</string>
+    <string name="action_logout">Đăng Xuất</string>
+    <string name="add_listing">Thêm xe mới</string>
+
+    <!-- Location filter -->
+    <string name="filter_by_location">Gần Tôi</string>
+    <string name="location_coming_soon">Tìm kiếm vị trí sắp có</string>
+    <string name="chip_all">Tất Cả</string>
+    <string name="chip_my_cars">Xe Của Tôi</string>
+    <string name="chip_favourites">Yêu Thích</string>
+    <string name="near_me">Gần Tôi</string>
+    <string name="empty_my_cars_home">Bạn chưa đăng xe nào cho thuê</string>
+    <string name="empty_favourites_home">Bạn chưa lưu xe yêu thích nào</string>
+
+    <!-- Booking status -->
+    <string name="status_active">Đang thuê</string>
+    <string name="status_completed">Hoàn thành</string>
+    <string name="status_cancelled">Đã hủy</string>
+
+    <!-- Chat -->
+    <string name="messages_title">Tin Nhắn</string>
+    <string name="search_users_hint">Tìm người dùng…</string>
+    <string name="no_conversations">Chưa có cuộc hội thoại nào</string>
+    <string name="type_message">Nhập tin nhắn…</string>
+    <string name="send">Gửi</string>
+    <string name="typing_indicator">đang nhập…</string>
+    <string name="chat">Nhắn</string>
+
+    <!-- Car Status -->
+    <string name="status_unlisted">Chưa đăng</string>
+    <string name="status_listed">Đang đăng</string>
+    <string name="status_rented">Đang thuê</string>
+    <string name="currently_rented">Xe Đang Được Thuê</string>
+
+    <!-- My Cars -->
+    <string name="my_cars">Xe Của Tôi</string>
+    <string name="action_my_cars">Xe Của Tôi</string>
+    <string name="add_car">Thêm Xe</string>
+    <string name="no_cars_in_garage">Bạn chưa có xe nào. Hãy thử thêm xe mới!</string>
+    <string name="empty_unlisted">Không có xe chưa đăng. Hãy thêm xe mới hoặc gỡ đăng một xe đang đăng.</string>
+    <string name="empty_listed">Chưa có xe nào đang đăng cho thuê. Hãy đăng từ danh sách xe chưa đăng.</string>
+    <string name="empty_rented">Chưa có xe nào đang được thuê. Khi bạn duyệt một giá đặt, xe sẽ hiển thị ở đây.</string>
+    <string name="tab_all">Tất cả</string>
+    <string name="tab_unlisted">Chưa đăng</string>
+    <string name="tab_listed">Đang đăng</string>
+    <string name="tab_rented">Đã cho thuê</string>
+
+    <!-- Detail Actions -->
+    <string name="list_for_rent">Đăng Lên Chợ</string>
+    <string name="unlist_car">Gỡ Đăng</string>
+    <string name="edit_car">Chỉnh Sửa</string>
+    <string name="delete_car">Xóa Xe</string>
+    <string name="mark_complete">Hoàn Tất</string>
+    <string name="chat_with_owner">Nhắn Chủ Xe</string>
+    <string name="owner_format">Đăng bởi %s</string>
+    <string name="car_listed">Xe đã được đăng lên sàn</string>
+    <string name="car_unlisted">Xe đã gỡ khỏi sàn</string>
+    <string name="booking_completed">Đã hoàn tất thuê xe</string>
+    <string name="car_deleted">Đã xóa xe</string>
+    <string name="car_added_success">Đã thêm xe vào garage!</string>
+    <string name="car_updated_success">Đã cập nhật xe!</string>
+    <string name="save_changes">Lưu Thay Đổi</string>
+    <string name="remove_photo">Xóa ảnh</string>
+
+    <!-- List Car Form -->
+    <string name="list_car_title">Đăng Cho Thuê</string>
+    <string name="set_rental_terms">Thiết Lập Điều Khoản</string>
+    <string name="listing_notes_hint">Ghi chú cho người thuê (tùy chọn)</string>
+    <string name="mileage_hint">Số km đã đi</string>
+    <string name="list_car_success">Xe đã được đăng lên sàn!</string>
+    <string name="edit_listing_title">Chỉnh Sửa Listing</string>
+    <string name="update_listing">Cập Nhật Listing</string>
+    <string name="listing_updated_success">Đã cập nhật listing!</string>
+    <string name="edit_listing">Sửa Listing</string>
+    <string name="car_description_hint">Mô Tả Xe</string>
+    <string name="confirm_delete_car">Bạn có chắc muốn xóa xe này? Thao tác này không thể hoàn tác.</string>
+    <string name="confirm_unlist_car">Bạn có chắc muốn gỡ xe khỏi danh sách? Tất cả cọc đang chờ sẽ được hoàn trả.</string>
+    <string name="confirm_mark_complete">Hoàn tất thuê xe? Xe sẽ quay về garage của bạn.</string>
+    <string name="booking_details_format">Người thuê: %1$s\n%2$d ngày • %3$d Tín dụng</string>
+
+    <!-- Bidding -->
+    <string name="place_bid">Đặt Giá</string>
+    <string name="cancel_bid">Hủy Đặt Giá</string>
+    <string name="approve_bid">Duyệt Giá</string>
+    <string name="approve">Duyệt</string>
+    <string name="reject">Từ chối</string>
+    <string name="confirm_bid">Xác Nhận Đặt Giá</string>
+    <string name="bid_placed">Đã đặt giá! Số tiền đã giữ từ số dư.</string>
+    <string name="bid_cancelled">Đã hủy đặt giá. Đã hoàn tiền.</string>
+    <string name="bid_approved">Đã duyệt! Đã tạo đặt xe.</string>
+    <string name="bid_rejected">Đã từ chối. Đã hoàn tiền cho người đặt.</string>
+    <string name="edit_bid">Sửa giá</string>
+    <string name="bid_updated">Đã cập nhật giá</string>
+    <string name="your_bid">Giá Của Bạn</string>
+    <string name="bids">Đặt Giá</string>
+    <string name="bids_count">Đặt giá (%d)</string>
+    <string name="no_bids">Chưa có ai đặt giá</string>
+    <string name="bid_daily_rate">Giá đề xuất/ngày</string>
+    <string name="bid_total">Tổng cộng</string>
+    <string name="bid_message_hint">Lời nhắn cho chủ xe (tùy chọn)</string>
+    <string name="bid_held_notice">Toàn bộ số tiền đặt giá sẽ được giữ từ số dư. Sẽ hoàn lại nếu bị từ chối hoặc hủy.</string>
+    <string name="bid_summary_format">%1$d TD/ngày × %2$d ngày</string>
+    <string name="quoted_text">“%1$s”</string>
+    <string name="car_model_year_format">%1$s · %2$d</string>
+    <string name="after_bid">Sau Khi Đặt</string>
+    <string name="confirm_approve_bid">Duyệt giá của %1$s với %2$d Tín dụng? Các giá chờ khác sẽ được hoàn tiền.</string>
+    <string name="status_pending">Đang chờ</string>
+    <string name="status_approved">Đã duyệt</string>
+    <string name="status_rejected">Đã từ chối</string>
+
+    <!-- My Rentals Tab -->
+    <string name="tab_bidding">Đang đấu giá</string>
+    <string name="tab_renting">Đang thuê</string>
+    <string name="empty_rentals_all">Bạn chưa đặt giá hay thuê xe nào.</string>
+    <string name="empty_bidding">Bạn chưa có giá đặt nào. Hãy duyệt sàn để tìm xe.</string>
+    <string name="empty_renting">Bạn hiện không đang thuê xe nào.</string>
+
+    <!-- Pagination -->
+    <string name="load_more">Xem thêm</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Thông báo</string>
+    <string name="no_notifications">Chưa có thông báo</string>
+    <string name="notif_search_hint">Tìm thông báo…</string>
+    <string name="cd_notification_type">Loại thông báo</string>
+    <string name="notification_details">Chi tiết thông báo</string>
+    <string name="mark_as_unread">Đánh dấu chưa đọc</string>
+    <string name="sheet_kv_format">%1$s: %2$s</string>
+    <string name="sheet_label_car">Xe</string>
+    <string name="sheet_label_actor">Từ</string>
+    <string name="sheet_label_amount">Số tiền</string>
+    <string name="sheet_label_days">Thời lượng</string>
+    <string name="sheet_label_reference">Mã tham chiếu</string>
+    <string name="sheet_label_type">Loại</string>
+    <string name="sheet_label_balance_after">Số dư sau</string>
+
+    <plurals name="sheet_days">
+        <item quantity="one">%d ngày</item>
+        <item quantity="other">%d ngày</item>
+    </plurals>
+    <string name="notif_unknown_user">Ai đó</string>
+
+    <string name="notif_title_new_bid">Có bid mới cho %s</string>
+    <string name="notif_body_new_bid">%1$s đặt %2$d TD cho %3$d ngày</string>
+
+    <string name="notif_title_bid_won">Bạn đã trúng %s</string>
+    <string name="notif_body_bid_won">Chủ xe duyệt: %1$d TD cho %2$d ngày</string>
+
+    <string name="notif_title_bid_lost">Không trúng: %s</string>
+    <string name="notif_body_bid_lost">Chủ xe chọn %s</string>
+
+    <string name="notif_title_bid_approved_owner">Đã chốt thuê: %s</string>
+    <string name="notif_body_bid_approved_owner">Bạn đã duyệt %1$s (%2$d TD • %3$d ngày)</string>
+
+    <string name="notif_title_bid_rejected">Đã từ chối bid: %s</string>
+    <string name="notif_body_bid_rejected">%1$s đã từ chối bid của bạn (%2$d TD • %3$d ngày)</string>
+
+    <string name="notif_title_bid_cancelled">Đã hủy bid: %s</string>
+    <string name="notif_body_bid_cancelled">%s đã hủy một bid</string>
+
+    <string name="notif_title_bids_cancelled_by_owner">Listing đã đóng: %s</string>
+    <string name="notif_body_bids_cancelled_by_owner">Tất cả bid đang chờ đã bị hủy và hoàn tiền</string>
+
+    <!-- Chat -->
+    <string name="chat_last_message_photo">📷 Ảnh</string>
+    <string name="chat_send_image_failed">Gửi ảnh thất bại. Vui lòng thử lại.</string>
+
+    <string name="loading_map">Đang tải bản đồ…</string>
+
+    <!-- Map Legend -->
+    <string name="legend_title">Chú thích</string>
+    <string name="legend_my_listed">Xe tôi (đang đăng)</string>
+    <string name="legend_available">Xe có sẵn</string>
+    <string name="my_location">Vị trí của tôi</string>
+    <string name="distance_km_format">Cách %.1f km</string>
+    <string name="distance_meters_format">Cách %d m</string>
+
+    <!-- Add Car description -->
+    <string name="car_description_required_hint">* Mô Tả Xe</string>
+
+    <string name="error_photo_required">Vui lòng thêm ít nhất một ảnh</string>
+
+    <!-- Map Picker -->
+    <string name="search_location_hint">Tìm vị trí…</string>
+    <string name="confirm_location">Xác nhận vị trí</string>
+    <string name="no_results_found">Không tìm thấy kết quả</string>
+    <string name="open_full_map">Mở bản đồ lớn</string>
+
+    <string name="max_rental_days_format">Tối đa %d ngày</string>
+</resources>

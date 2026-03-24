@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarForRent</string>
+    <string name="close">Close</string>
+    <string name="notification_channel_general_name">General</string>
+    <string name="notification_channel_general_desc">Booking, chat, and account alerts</string>
+    <string name="default_notification_channel_id" translatable="false">car_rental_general</string>
+    <string name="generic_user">User</string>
+    <string name="generic_error">Something went wrong</string>
+    <string name="unread_count_overflow">99+</string>
+
+    <string name="seed_dialog_title">Seed test data</string>
+    <string name="seed_dialog_message">Create 20 test users with credits?\n\nYou will be signed out after seeding and need to log in again.</string>
+    <string name="seed_action">Seed</string>
+    <string name="seed_cancel">Cancel</string>
+    <string name="seed_in_progress">Seeding data…</string>
+    <string name="seed_success">Seeded %1$d users. Please log in again.</string>
+    <string name="seed_failed">Seed failed: %1$s</string>
+
+    <string name="error_bids_cancel_by_listing_only">Bids can only be cancelled by cancelling the listing</string>
+    <string name="route_unavailable">Route unavailable</string>
+
+    <!-- Toolbar -->
+    <string name="settings_title">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language_switch_label">Tiếng Việt</string>
+    <string name="language">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_vietnamese">Vietnamese</string>
+
+    <!-- Home Screen -->
+    <string name="search_hint">Search by name or model…</string>
+    <string name="available_cars">Available Cars</string>
+    <string name="credits_format">%d Credits</string>
+    <string name="credits_per_day_format">%d Cr/day</string>
+    <string name="credits_suffix">Credits</string>
+    <string name="km_format">%,d km</string>
+    <string name="favourites_title">Favourites</string>
+    <string name="no_favourites">No favourites yet. Long-press a car to add.</string>
+    <string name="no_cars">No cars available</string>
+    <string name="rented_badge">Rented</string>
+    <string name="filter_title">Filter Cars</string>
+    <string name="filter_all">All Cars</string>
+    <string name="filter_available">Available Only</string>
+    <string name="filter_rented">Rented Only</string>
+    <string name="location_lat_lng_format">Lat: %1$.4f, Lng: %2$.4f</string>
+
+    <!-- Detail Screen -->
+    <string name="car_details">Car Details</string>
+    <string name="model_year_format">%1$s • %2$d</string>
+    <string name="spec_km">Type</string>
+    <string name="spec_cost">Daily Cost</string>
+    <string name="spec_year">Year</string>
+    <string name="your_balance">Your Balance</string>
+    <string name="rent_this_car">Rent This Car</string>
+
+    <!-- Rent Screen -->
+    <string name="booking">Booking</string>
+    <string name="rental_duration">Rental Duration</string>
+    <string name="days_format">%d days</string>
+    <string name="day_format">%d day</string>
+    <!-- Rental Form -->
+    <string name="your_details">Your Details</string>
+    <string name="name_hint">Full Name</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="license_hint">Driver\'s License No.</string>
+    <string name="email_hint">Email Address</string>
+    <string name="cost_summary">Cost Summary</string>
+    <string name="daily_cost">Daily Cost</string>
+    <string name="duration">Duration</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="after_booking">After Booking</string>
+    <string name="confirm_booking">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Messages -->
+    <string name="booking_confirmed">Booking confirmed!</string>
+    <string name="booking_cancelled">Booking cancelled</string>
+    <string name="booking_cancelled_refund">Booking cancelled — %d Credits refunded</string>
+    <string name="cancel_booking">Cancel Booking</string>
+    <string name="booking_info">Booking Info</string>
+    <string name="booking_days_format">%1$d days • %2$d Credits</string>
+    <string name="added_to_favourites">%s added to favourites</string>
+    <string name="removed_from_favourites">%s removed from favourites</string>
+    <string name="error_field_required">Please fill out all required fields</string>
+    <string name="error_invalid_name">Name cannot contain numbers or special characters</string>
+    <string name="error_invalid_phone">Phone must be 10 digits and start with 0</string>
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="error_max_limit_exceeded">Rental cost (%1$d) exceeds the %2$d Credits maximum limit</string>
+    <string name="error_insufficient_credit">Insufficient credit. Your balance is %1$d Credits</string>
+
+    <!-- Sort Menu -->
+    <string name="sort_by">Sort By</string>
+    <string name="sort_by_year">Year (New → Old)</string>
+    <string name="sort_by_cost">Cost (Low → High)</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_car_image">Car image</string>
+    <string name="cd_toggle_favourite">Toggle favourite</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_sort">Sort cars</string>
+    <string name="cd_share">Share car</string>
+    <string name="cd_close">Close</string>
+    <string name="cd_chat_image_fullscreen">Chat image</string>
+    <string name="share_car_text">Here are the details for the selected vehicle from CarForRent:\n\n• Vehicle: %1$s (%2$d)\n• Daily Rate: %3$d Credits\n\nPlease let me know if you are interested in this option.</string>
+    <string name="share_copied">Text copied to clipboard to paste in apps like Messenger</string>
+
+    <!-- Wallet -->
+    <string name="wallet_title">Wallet</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="top_up">Top Up</string>
+    <string name="tab_overview">Overview</string>
+    <string name="tab_history">History</string>
+    <string name="spending_summary">Spending Summary</string>
+    <string name="total_spent">Total Spent</string>
+    <string name="total_spent_rental">Total spent (rentals)</string>
+    <string name="total_held_bids">Currently held (bids)</string>
+    <string name="total_topped_up">Total Topped Up</string>
+    <string name="total_income">Total Income</string>
+    <string name="no_transactions">No transactions yet</string>
+    <string name="top_up_success">Successfully topped up %d Credits!</string>
+
+    <string name="credits_amount_format">%1$s Cr</string>
+    <string name="cd_transaction_type">Transaction type</string>
+    <string name="transaction_details">Transaction Details</string>
+    <string name="transaction_type_format">Type: %s</string>
+    <string name="transaction_reference_format">Reference: %s</string>
+    <string name="transaction_balance_after_format">Balance after: %d Cr</string>
+
+    <string name="txn_search_hint">Search transactions…</string>
+
+    <!-- SePay / QR -->
+    <string name="select_amount">Select top-up amount</string>
+    <string name="generate_qr">Generate QR Code</string>
+    <string name="pay_now">Pay Now (Open Banking App)</string>
+    <string name="simulate_payment">Simulate Payment (Demo)</string>
+    <string name="qr_code">QR Code</string>
+    <string name="scan_qr_instruction">Scan this QR code with your banking app to complete the payment</string>
+    <string name="waiting_payment">Waiting for payment confirmation…</string>
+    <string name="waiting_payment_with_timer">Waiting for payment… (%ds)</string>
+    <string name="payment_confirmed">Payment confirmed!</string>
+    <string name="payment_timeout">Payment not detected. Please try again or check your banking app.</string>
+    <string name="payment_error">An error occurred while verifying payment.</string>
+    <string name="or_scan_qr">Or scan QR code below</string>
+    <string name="custom_amount_hint">Or enter custom amount</string>
+    <string name="enter_amount_hint">Enter amount</string>
+    <string name="vnd_equivalent_format">= %,d VND</string>
+    <string name="sepay_transfer_account_format">%1$s • %2$s • %3$s</string>
+    <string name="credit_to_vnd_format">%1$d %2$s = %3$,3d VND</string>
+    <string name="view_qr_fullscreen">View QR Fullscreen</string>
+    <string name="no_banking_app">No banking app found. Use QR to scan.</string>
+    <string name="invalid_amount">Please enter a valid amount (1–99999)</string>
+    <string name="confirm_top_up">Confirm Top Up</string>
+    <string name="open_banking_app">Open Banking App</string>
+    <string name="transfer_info">Transfer info</string>
+    <string name="copy_memo">Copy memo</string>
+    <string name="copy_all">Copy all</string>
+    <string name="copy_amount">Copy amount</string>
+    <string name="copy_account">Copy account</string>
+    <string name="copy_reference">Copy reference</string>
+    <string name="copied">Copied</string>
+    <string name="retry_check_payment">Check payment again</string>
+
+    <!-- Map -->
+    <string name="map_title">Car Locations</string>
+    <string name="view_details">View Details</string>
+
+    <!-- Recommendations -->
+    <string name="recommended_for_you">Recommended for You</string>
+    <string name="popular_cars">Popular Cars</string>
+
+    <!-- Auth -->
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
+    <string name="login_subtitle">Sign in to rent or list cars</string>
+    <string name="login_google">Continue with Google</string>
+    <string name="or_divider">— or —</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="has_account">Already have an account?</string>
+    <string name="create_account">Create Account</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="error_password_short">Password must be at least 8 characters</string>
+    <string name="error_password_no_digit">Password must contain at least one number</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_name_letters_only">Name can only contain letters and spaces</string>
+    <string name="error_login">Login failed. Please try again.</string>
+    <string name="error_login_user_not_found">No account found with this email</string>
+    <string name="error_login_wrong_password">Incorrect password</string>
+    <string name="error_login_invalid_credential">Invalid email or password</string>
+    <string name="error_login_too_many_requests">Too many failed attempts. Try again later</string>
+    <string name="error_login_network">Network error. Check your connection</string>
+    <string name="error_login_user_disabled">This account has been disabled</string>
+    <string name="error_register">Registration failed. Please try again.</string>
+    <string name="error_register_email_exists">An account with this email already exists</string>
+    <string name="error_google_sign_in">Google sign-in failed</string>
+    <string name="logout">Log Out</string>
+
+    <!-- Add Car -->
+    <string name="add_car_title">Add Car</string>
+    <string name="car_photos">Photos</string>
+    <string name="add_photo">Add Photos</string>
+    <string name="photos_count">%d photo(s) selected</string>
+    <string name="spec_year_hint">* Year</string>
+    <string name="car_title_hint">* Car Name (e.g. McLaren 600LT)</string>
+    <string name="car_model_hint">* Category</string>
+    <string name="daily_cost_hint">* Daily Cost (Credits)</string>
+    <string name="max_days_hint">* Max Rental Days</string>
+    <string name="notes_hint">Additional Notes</string>
+    <string name="pickup_location">Pickup Location</string>
+    <string name="tap_map_to_select">Tap on the map to select a pickup location</string>
+    <string name="list_car">List Car</string>
+    <string name="car_listed_success">Car listed successfully!</string>
+    <string name="error_photo_required">Please add at least one photo</string>
+    <string name="error_select_location">Please select a pickup location on the map</string>
+    <string name="error_daily_cost_zero">Daily cost must be greater than 0</string>
+    <string name="error_max_days_zero">Max rental days must be at least 1</string>
+    <string name="error_invalid_year">Enter a valid year (1990–%d)</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="my_listings">My Listings</string>
+    <string name="my_rentals">My Rentals</string>
+    <string name="no_listings">You haven\'t listed any cars yet</string>
+    <string name="no_rentals">You haven\'t rented any cars yet</string>
+    <string name="top_up_credits">Top Up Credits</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_cars">Cars</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_me">My Profile</string>
+    <string name="credits_balance_label">Credits Balance</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="chevron_right" translatable="false">›</string>
+    <string name="tab_my_cars">My Cars</string>
+    <string name="tab_my_listings">Listings</string>
+    <string name="tab_my_rentals">My Rentals</string>
+
+    <!-- Navigation menu -->
+    <string name="action_my_listings">My Listings</string>
+    <string name="action_my_rentals">My Rentals</string>
+    <string name="action_logout">Log Out</string>
+    <string name="add_listing">Add new listing</string>
+
+    <!-- Location filter -->
+    <string name="filter_by_location">Near Me</string>
+    <string name="location_coming_soon">Location search coming soon</string>
+    <string name="chip_all">All</string>
+    <string name="chip_my_cars">My Cars</string>
+    <string name="chip_favourites">Favourites</string>
+    <string name="near_me">Near Me</string>
+    <string name="empty_my_cars_home">You haven\'t listed any cars yet</string>
+    <string name="empty_favourites_home">You haven\'t saved any favourites yet</string>
+
+    <!-- Booking status -->
+    <string name="status_active">Active</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_cancelled">Cancelled</string>
+
+    <!-- Chat -->
+    <string name="messages_title">Messages</string>
+    <string name="search_users_hint">Search users…</string>
+    <string name="no_conversations">No conversations yet</string>
+    <string name="type_message">Type a message…</string>
+    <string name="send">Send</string>
+    <string name="typing_indicator">typing…</string>
+    <string name="chat">Chat</string>
+
+    <!-- Car Status -->
+    <string name="status_unlisted">Unlisted</string>
+    <string name="status_listed">Listed</string>
+    <string name="status_rented">Rented</string>
+    <string name="currently_rented">Currently Rented</string>
+
+    <!-- My Cars -->
+    <string name="my_cars">My Cars</string>
+    <string name="action_my_cars">My Cars</string>
+    <string name="add_car">Add Car</string>
+    <string name="no_cars_in_garage">You don\'t have any cars yet. Try adding a new car!</string>
+    <string name="empty_unlisted">No unlisted cars. Try adding new cars or unlisting a listed car.</string>
+    <string name="empty_listed">No cars listed for rent. Try listing one from your unlisted cars.</string>
+    <string name="empty_rented">None of your cars are rented out yet. Once you accept a bid, the car will appear here.</string>
+    <string name="tab_all">All</string>
+    <string name="tab_unlisted">Unlisted</string>
+    <string name="tab_listed">Listed</string>
+    <string name="tab_rented">Rented Out</string>
+
+    <!-- Detail Actions -->
+    <string name="list_for_rent">List to Marketplace</string>
+    <string name="unlist_car">Unlist</string>
+    <string name="edit_car">Edit</string>
+    <string name="delete_car">Delete</string>
+    <string name="mark_complete">Mark Complete</string>
+    <string name="chat_with_owner">Chat with Owner</string>
+    <string name="owner_format">Listed by %s</string>
+    <string name="car_listed">Car is now listed on the marketplace</string>
+    <string name="car_unlisted">Car removed from marketplace</string>
+    <string name="booking_completed">Booking marked as completed</string>
+    <string name="car_deleted">Car deleted</string>
+    <string name="car_added_success">Car added to your garage!</string>
+    <string name="car_updated_success">Car updated!</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="remove_photo">Remove photo</string>
+
+    <!-- List Car Form -->
+    <string name="list_car_title">List for Rent</string>
+    <string name="set_rental_terms">Set Rental Terms</string>
+    <string name="listing_notes_hint">Notes for renters (optional)</string>
+    <string name="mileage_hint">Mileage (km)</string>
+    <string name="list_car_success">Car is now listed on the marketplace!</string>
+    <string name="edit_listing_title">Edit Listing</string>
+    <string name="update_listing">Update Listing</string>
+    <string name="listing_updated_success">Listing updated!</string>
+    <string name="edit_listing">Edit Listing</string>
+    <string name="car_description_hint">Car Description</string>
+    <string name="confirm_delete_car">Are you sure you want to delete this car? This cannot be undone.</string>
+    <string name="confirm_unlist_car">Are you sure you want to unlist this car? All pending bids will be refunded.</string>
+    <string name="confirm_mark_complete">Mark this booking as completed? The car will return to your garage.</string>
+    <string name="booking_details_format">Renter: %1$s\n%2$d days • %3$d Credits</string>
+
+    <!-- Bidding -->
+    <string name="place_bid">Place Bid</string>
+    <string name="cancel_bid">Cancel Bid</string>
+    <string name="approve_bid">Approve Bid</string>
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+    <string name="confirm_bid">Confirm Bid</string>
+    <string name="bid_placed">Bid placed! Amount held from your balance.</string>
+    <string name="bid_cancelled">Bid cancelled. Amount refunded.</string>
+    <string name="bid_approved">Bid approved! Booking created.</string>
+    <string name="bid_rejected">Bid rejected. Amount refunded to bidder.</string>
+    <string name="edit_bid">Edit Bid</string>
+    <string name="bid_updated">Bid updated</string>
+    <string name="your_bid">Your Bid</string>
+    <string name="bids">Bids</string>
+    <string name="bids_count">Bids (%d)</string>
+    <string name="no_bids">No bids yet</string>
+    <string name="bid_daily_rate">Proposed Daily Rate</string>
+    <string name="bid_total">Total</string>
+    <string name="bid_message_hint">Message to owner (optional)</string>
+    <string name="bid_held_notice">The full bid amount will be held from your balance. It will be refunded if the bid is rejected or cancelled.</string>
+    <string name="bid_summary_format">%1$d Cr/day × %2$d days</string>
+    <string name="quoted_text">“%1$s”</string>
+    <string name="car_model_year_format">%1$s · %2$d</string>
+    <string name="after_bid">After Bid</string>
+    <string name="confirm_approve_bid">Approve %1$s\'s bid for %2$d Credits? Other pending bids will be refunded.</string>
+    <string name="confirm_reject_bid">Reject %1$s\'s bid for %2$d Credits? The amount will be refunded to the bidder.</string>
+    <string name="status_pending">Pending</string>
+    <string name="status_approved">Approved</string>
+    <string name="status_rejected">Rejected</string>
+
+    <!-- My Rentals Tab -->
+    <string name="tab_bidding">Bidding</string>
+    <string name="tab_renting">Renting</string>
+    <string name="empty_rentals_all">You haven\'t placed any bids or rented any cars yet.</string>
+    <string name="empty_bidding">You don\'t have any active bids. Browse the marketplace to find cars.</string>
+    <string name="empty_renting">You\'re not currently renting any cars.</string>
+
+    <!-- Pagination -->
+    <string name="load_more">Load More</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Notifications</string>
+    <string name="no_notifications">No notifications yet</string>
+    <string name="notif_search_hint">Search notifications…</string>
+    <string name="cd_notification_type">Notification type</string>
+    <string name="notification_details">Notification Details</string>
+    <string name="mark_as_unread">Mark as unread</string>
+    <string name="sheet_kv_format">%1$s: %2$s</string>
+    <string name="sheet_label_car">Car</string>
+    <string name="sheet_label_actor">From</string>
+    <string name="sheet_label_amount">Amount</string>
+    <string name="sheet_label_days">Duration</string>
+    <string name="sheet_label_reference">Reference</string>
+    <string name="sheet_label_type">Type</string>
+    <string name="sheet_label_balance_after">Balance after</string>
+
+    <plurals name="sheet_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <string name="notif_unknown_user">Someone</string>
+
+    <string name="notif_title_new_bid">New bid on %s</string>
+    <string name="notif_body_new_bid">%1$s bid %2$d Credits for %3$d day(s)</string>
+
+    <string name="notif_title_bid_won">You won %s</string>
+    <string name="notif_body_bid_won">Owner accepted your bid: %1$d Credits for %2$d day(s)</string>
+
+    <string name="notif_title_bid_lost">Bid not accepted: %s</string>
+    <string name="notif_body_bid_lost">Owner chose %s</string>
+
+    <string name="notif_title_bid_approved_owner">Rental confirmed: %s</string>
+    <string name="notif_body_bid_approved_owner">You accepted %1$s (%2$d Credits • %3$d day(s))</string>
+
+    <string name="notif_title_bid_rejected">Bid rejected: %s</string>
+    <string name="notif_body_bid_rejected">%1$s rejected your bid (%2$d Credits • %3$d day(s))</string>
+
+    <string name="notif_title_bid_cancelled">Bid cancelled: %s</string>
+    <string name="notif_body_bid_cancelled">%s cancelled a bid</string>
+
+    <string name="notif_title_bids_cancelled_by_owner">Listing closed: %s</string>
+    <string name="notif_body_bids_cancelled_by_owner">All pending bids were cancelled and refunded</string>
+
+    <!-- Chat -->
+    <string name="chat_last_message_photo">📷 Photo</string>
+    <string name="chat_send_image_failed">Failed to send image. Please try again.</string>
+
+    <string name="loading_map">Loading map…</string>
+
+    <!-- Map Legend -->
+    <string name="legend_title">Legend</string>
+    <string name="legend_my_listed">My car (listed)</string>
+    <string name="legend_available">Available cars</string>
+    <string name="my_location">My Location</string>
+    <string name="distance_km_format">%.1f km away</string>
+    <string name="distance_meters_format">%d m away</string>
+
+    <!-- Add Car description -->
+    <string name="car_description_required_hint">* Car Description</string>
+
+    <!-- Map Picker -->
+    <string name="search_location_hint">Search location…</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="no_results_found">No results found</string>
+    <string name="open_full_map">Open Full Map</string>
+
+    <string name="max_rental_days_format">Max %d days</string>
+</resources>

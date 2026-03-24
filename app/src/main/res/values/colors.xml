@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notion Style Light Theme -->
+    <color name="primary">#FFFFFF</color> <!-- White toolbar -->
+    <color name="primary_dark">#E9E9E7</color> <!-- Notion gray border for status bar -->
+    <color name="accent">#2383E2</color> <!-- Notion Blue -->
+
+    <!-- Theme Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#191919</color>
+
+    <color name="text_primary">#37352F</color> <!-- Notion Text -->
+    <color name="text_secondary">#9B9A97</color> <!-- Notion Gray Text -->
+    <color name="text_on_primary">#37352F</color> <!-- Text on white toolbar -->
+
+    <color name="surface">#F7F6F3</color> <!-- Notion Warm Gray for cards -->
+    <color name="car_card_bg">#FFFFFF</color> <!-- Inner card white -->
+    <color name="divider">#E0E0E0</color> <!-- Darkened slightly for card borders -->
+
+    <color name="favourite_heart">#EB5757</color> <!-- Notion Red -->
+    <color name="rating_star">#DFAB01</color> <!-- Notion Yellow -->
+    <color name="credit_positive">#0F7B0F</color> <!-- Notion Green -->
+    <color name="credit_negative">#EB5757</color> <!-- Notion Red -->
+    <color name="sort_icon">#37352F</color>
+    <color name="error">#EB5757</color>
+
+    <!-- Map Legend Colors -->
+    <color name="legend_my_listed">#4FC3F7</color>
+    <color name="legend_available">#4CAF50</color>
+    <color name="legend_my_location">#EB5757</color>
+</resources>

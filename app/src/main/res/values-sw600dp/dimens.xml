@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="car_image_height_large">300dp</dimen>
+    <dimen name="car_image_height_grid">180dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="toolbar_height">64dp</dimen>
+    <dimen name="spec_chip_width">120dp</dimen>
+    <dimen name="spec_chip_height">80dp</dimen>
+</resources>

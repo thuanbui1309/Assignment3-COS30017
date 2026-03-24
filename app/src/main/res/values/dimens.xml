@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Car image -->
+    <dimen name="car_image_height_large">240dp</dimen>
+    <dimen name="car_image_height_grid">140dp</dimen>
+    <dimen name="car_image_height_compact">60dp</dimen>
+
+    <!-- Cards -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_height">44dp</dimen>
+
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+
+    <!-- Favourites -->
+    <dimen name="fav_thumbnail_width">96dp</dimen>
+    <dimen name="fav_thumbnail_height">64dp</dimen>
+
+    <!-- Spec chips -->
+    <dimen name="spec_chip_width">100dp</dimen>
+    <dimen name="spec_chip_height">72dp</dimen>
+</resources>

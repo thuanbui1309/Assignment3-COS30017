@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notion Style Dark Theme -->
+    <color name="primary">#191919</color> <!-- Dark toolbar -->
+    <color name="primary_dark">#0F0F0F</color> <!-- Darker status bar -->
+    <color name="accent">#529CCA</color> <!-- Softer Notion Blue for Dark -->
+
+    <color name="background">#191919</color>
+    <color name="text_primary">#E3E2DF</color> <!-- Light grey text -->
+    <color name="text_secondary">#9B9A97</color> <!-- Same grey text -->
+    <color name="text_on_primary">#E3E2DF</color>
+
+    <color name="surface">#252525</color> <!-- Slightly lighter dark for cards -->
+    <color name="car_card_bg">#2A2A2A</color>
+    <color name="divider">#373737</color>
+    <color name="sort_icon">#E3E2DF</color>
+</resources>
