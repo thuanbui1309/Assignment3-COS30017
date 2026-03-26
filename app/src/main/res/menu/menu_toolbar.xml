@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_chat"
+        android:title="@string/messages_title"
+        android:icon="@drawable/ic_chat"
+        app:actionLayout="@layout/view_toolbar_icon_badge"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_my_cars"
+        android:title="@string/action_my_cars"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_my_listings"
+        android:title="@string/action_my_listings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_my_rentals"
+        android:title="@string/action_my_rentals"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_profile"
+        android:title="@string/profile_title"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings_title"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        app:showAsAction="never" />
+
+</menu>
