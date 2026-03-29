@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="?android:colorBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/primary"
+            app:titleTextColor="@color/white"
+            app:title="@string/car_details"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_lg">
+
+            <!-- Car Image Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/car_card_bg">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/car_image_height_large">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vp_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!-- Dots indicator -->
+                    <LinearLayout
+                        android:id="@+id/layout_dots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/spacing_sm"
+                        android:orientation="horizontal" />
+
+                    <!-- Status Banner (top-left) -->
+                    <TextView
+                        android:id="@+id/tv_status_banner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|start"
+                        android:layout_margin="@dimen/spacing_md"
+                        android:paddingHorizontal="@dimen/spacing_md"
+                        android:paddingVertical="@dimen/spacing_xs"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Car Name + Info Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/spacing_lg">
+
+                <TextView
+                    android:id="@+id/tv_car_name"
+                    style="@style/CarTitleStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_model_year"
+                    style="@style/SecondaryInfoStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_sm" />
+
+            </LinearLayout>
+
+            <!-- Owner Name -->
+            <TextView
+                android:id="@+id/tv_owner_name"
+                style="@style/SecondaryInfoStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:visibility="gone" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:layout_marginBottom="@dimen/spacing_lg" />
+
+            <!-- Specs Chips Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spec_chip_height"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_spec_chip"
+                    android:layout_marginEnd="@dimen/spacing_sm"
+                    android:padding="@dimen/spacing_sm">
+                    <TextView
+                        android:id="@+id/tv_spec_km_value"
+                        style="@style/SpecChipValueStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" />
+                    <TextView
+                        style="@style/SpecChipLabelStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/spec_km" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_spec_cost"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spec_chip_height"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_spec_chip"
+                    android:layout_marginEnd="@dimen/spacing_sm"
+                    android:padding="@dimen/spacing_sm">
+                    <TextView
+                        android:id="@+id/tv_spec_cost_value"
+                        style="@style/SpecChipValueStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" />
+                    <TextView
+                        style="@style/SpecChipLabelStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/spec_cost" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spec_chip_height"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_spec_chip"
+                    android:padding="@dimen/spacing_sm">
+                    <TextView
+                        android:id="@+id/tv_spec_year_value"
+                        style="@style/SpecChipValueStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" />
+                    <TextView
+                        style="@style/SpecChipLabelStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/spec_year" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Car Description -->
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:textColor="?colorOnSurface"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:visibility="gone" />
+
+            <!-- Location Preview (only when LISTED and has coordinates) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_location_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_lg">
+
+                    <TextView
+                        style="@style/SectionTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pickup_location"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_pickup_address"
+                        style="@style/SecondaryInfoStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs" />
+
+                    <TextView
+                        android:id="@+id/tv_pickup_distance"
+                        style="@style/SecondaryInfoStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp">
+
+                        <FrameLayout
+                            android:id="@+id/map_preview_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_open_map_full"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:text="@string/open_full_map"
+                        android:textSize="13sp"
+                        style="@style/Widget.CarRental.Button.OutlinedAccent"
+                        app:icon="@drawable/ic_open_in_new"
+                        app:iconSize="16dp"
+                        app:iconTint="@color/accent" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Credit Balance Section -->
+            <LinearLayout
+                android:id="@+id/layout_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:visibility="gone">
+                <TextView
+                    style="@style/SectionTitleStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/your_balance"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/tv_balance"
+                    style="@style/CreditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Booking Info Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_booking_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_lg">
+                    <TextView
+                        style="@style/SectionTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/booking_info"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_booking_details"
+                        style="@style/SecondaryInfoStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- My Bid Section (renter who already bid) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_my_bid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/accent"
+                app:strokeWidth="1dp"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_lg">
+                    <TextView
+                        style="@style/SectionTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_bid"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_my_bid_details"
+                        style="@style/SecondaryInfoStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Bids Section (owner sees all bids) -->
+            <LinearLayout
+                android:id="@+id/layout_bids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tv_bids_title"
+                    style="@style/SectionTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bids"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/tv_no_bids"
+                    style="@style/SecondaryInfoStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_bids"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:visibility="gone" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_bids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:nestedScrollingEnabled="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_load_more_bids"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/load_more"
+                    android:textColor="@color/accent"
+                    android:textAllCaps="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Action Buttons (all gone by default, shown based on state) -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_place_bid"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/place_bid"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="@color/accent"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_chat_owner"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/chat_with_owner"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/accent"
+                android:textColor="@color/accent"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_list_for_rent"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/list_for_rent"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="@color/accent"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_unlist"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/unlist_car"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/accent"
+                android:textColor="@color/accent"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/edit_car"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/accent"
+                android:textColor="@color/accent"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit_listing"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/edit_listing"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/accent"
+                android:textColor="@color/accent"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/delete_car"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/error"
+                android:textColor="@color/error"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mark_complete"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/mark_complete"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="@color/accent"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel_booking"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/cancel_booking"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/error"
+                android:textColor="@color/error"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Loading overlay -->
+    <FrameLayout
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

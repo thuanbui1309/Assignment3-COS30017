@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_xl">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/place_bid"
+        style="@style/SectionTitleStyle"
+        android:layout_marginBottom="@dimen/spacing_lg" />
+
+    <!-- Rental Duration -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rental_duration"
+        style="@style/SecondaryInfoStyle"
+        android:layout_marginBottom="@dimen/spacing_xs" />
+
+    <TextView
+        android:id="@+id/tv_duration_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="?colorOnSurface" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="1"
+        android:valueTo="7"
+        android:stepSize="1"
+        app:thumbColor="@color/accent"
+        app:trackColorActive="@color/accent"
+        app:trackColorInactive="@color/divider"
+        app:haloColor="@color/accent"
+        app:tickColorActive="@color/white"
+        app:tickColorInactive="@color/text_secondary"
+        app:labelBehavior="gone"
+        android:layout_marginBottom="@dimen/spacing_md" />
+
+    <!-- Proposed Daily Rate -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_daily_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_md"
+        style="@style/Widget.CarRental.TextInputLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_daily_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/bid_daily_rate"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Message to owner -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_md"
+        style="@style/Widget.CarRental.TextInputLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/bid_message_hint"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:gravity="top" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Cost Summary -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/divider"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="@dimen/spacing_lg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/SecondaryInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/bid_total" />
+                <TextView
+                    android:id="@+id/tv_bid_total"
+                    style="@style/CostHighlightStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/spacing_xs">
+                <TextView
+                    style="@style/SecondaryInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/your_balance" />
+                <TextView
+                    android:id="@+id/tv_balance"
+                    style="@style/CreditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/spacing_xs">
+                <TextView
+                    style="@style/SecondaryInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/after_bid" />
+                <TextView
+                    android:id="@+id/tv_after_bid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Held notice -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bid_held_notice"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="@dimen/spacing_md" />
+
+    <!-- Validation error -->
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/error"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/spacing_sm" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm_bid"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/confirm_bid"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="@color/accent"
+        app:cornerRadius="@dimen/card_corner_radius" />
+
+</LinearLayout>

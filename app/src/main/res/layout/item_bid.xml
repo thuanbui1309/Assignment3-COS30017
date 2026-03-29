@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_sm"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/divider"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md">
+
+        <!-- Header: Bidder name + Status badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_bidder_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="?colorOnSurface" />
+
+            <TextView
+                android:id="@+id/tv_bid_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/spacing_sm"
+                android:paddingVertical="2dp"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- Bid details: rate x days = total -->
+        <TextView
+            android:id="@+id/tv_bid_summary"
+            style="@style/SecondaryInfoStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+        <!-- Total amount -->
+        <TextView
+            android:id="@+id/tv_bid_total"
+            style="@style/CostHighlightStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+        <!-- Optional message -->
+        <TextView
+            android:id="@+id/tv_bid_message"
+            style="@style/SecondaryInfoStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:fontFamily="sans-serif-light"
+            android:visibility="gone" />
+
+        <!-- Action buttons (owner only, for PENDING bids) -->
+        <LinearLayout
+            android:id="@+id/layout_bid_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_approve"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/approve"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/accent"
+                android:layout_marginEnd="@dimen/spacing_sm"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reject"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/reject"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/error"
+                android:textColor="@color/error"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:layout_marginEnd="@dimen/spacing_sm"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_chat_bidder"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/chat"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/accent"
+                android:textColor="@color/accent"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:cornerRadius="@dimen/card_corner_radius" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_lg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/spacing_lg">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/top_up"
+            android:textColor="?colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="@string/cd_close"
+            app:tint="@color/error" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Custom Amount Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_custom_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_amount_hint"
+            app:suffixText="@string/credits_suffix"
+            app:endIconMode="clear_text"
+            style="@style/Widget.CarRental.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_custom_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:maxLength="5" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Credit -> VND display (important) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_vnd_equivalent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/accent"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="?colorSurface">
+
+            <TextView
+                android:id="@+id/tv_vnd_equivalent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_md"
+                android:textColor="@color/accent"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Confirm: generates QR + starts polling -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_generate_qr"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/confirm_top_up"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/accent"
+            android:layout_marginTop="@dimen/spacing_md"
+            app:cornerRadius="@dimen/card_corner_radius" />
+    </LinearLayout>
+
+    <!-- Payment section (hidden until confirm) -->
+    <LinearLayout
+        android:id="@+id/layout_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/spacing_lg">
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tv_payment_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/waiting_payment"
+            android:textColor="?colorOnSurface"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="?colorSurface"
+            app:strokeColor="@color/divider"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transfer_info"
+                    android:textColor="?colorOnSurface"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="?colorOnSurface"
+                    android:textSize="13sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="?colorOnSurface"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/spacing_sm">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_copy_memo"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="@string/copy_memo"
+                        android:textAllCaps="false"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        android:gravity="center"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:cornerRadius="@dimen/card_corner_radius" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_copy_account"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/spacing_sm"
+                        android:text="@string/copy_account"
+                        android:textAllCaps="false"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        android:gravity="center"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:cornerRadius="@dimen/card_corner_radius" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Waiting + timer should appear here (under transfer info, before QR) -->
+        <LinearLayout
+            android:id="@+id/layout_waiting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/spacing_md">
+
+            <ProgressBar
+                android:id="@+id/progress_payment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/spacing_sm" />
+
+            <TextView
+                android:id="@+id/tv_payment_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waiting_payment"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:contentDescription="@string/qr_code" />
+
+        <!-- Open banking app -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_open_banking"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/open_banking_app"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/spacing_md"
+            app:cornerRadius="@dimen/card_corner_radius"
+            android:backgroundTint="@color/credit_positive"
+            app:icon="@drawable/ic_open_in_new"
+            app:iconGravity="textEnd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_retry_check"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/retry_check_payment"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:visibility="gone"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="@dimen/card_corner_radius" />
+
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
